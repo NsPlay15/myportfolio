@@ -1,40 +1,5 @@
 // Initialisation de Particles.js
 document.addEventListener('DOMContentLoaded', function() {
-    particlesJS('particles-js', {
-        particles: {
-            number: { value: 80, density: { enable: true, value_area: 800 } },
-            color: { value: '#ffffff' },
-            shape: { type: 'circle' },
-            opacity: { value: 0.5, random: false },
-            size: { value: 3, random: true },
-            line_linked: {
-                enable: true,
-                distance: 150,
-                color: '#ffffff',
-                opacity: 0.4,
-                width: 1
-            },
-            move: {
-                enable: true,
-                speed: 6,
-                direction: 'none',
-                random: false,
-                straight: false,
-                out_mode: 'out',
-                bounce: false
-            }
-        },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: { enable: true, mode: 'repulse' },
-                onclick: { enable: true, mode: 'push' },
-                resize: true
-            }
-        },
-        retina_detect: true
-    });
-
     // Animation du header au chargement
     setTimeout(() => {
         document.querySelector('.header-content').classList.add('visible');
@@ -89,21 +54,4 @@ window.addEventListener('scroll', () => {
     });
 
     lastScroll = currentScroll;
-});
-
-// Gestion du formulaire de contact
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-    };
-
-    // Simulation d'envoi du formulaire
-    console.log('Données du formulaire :', formData);
-    alert('Message envoyé avec succès !');
-    contactForm.reset();
 });
