@@ -18,9 +18,10 @@ body {
     line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
     position: fixed;
-    top: -100px; /* Caché par défaut */
+    top: -100px;
     left: 0;
     width: 100%;
     background-color: rgba(10, 31, 52, 0.95);
@@ -31,28 +32,21 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
-.navbar.visible {
-    top: 0;
-}
-
+.navbar.visible { top: 0; }
 .navbar a {
     color: white;
     text-decoration: none;
     margin-left: 2rem;
     transition: color 0.3s;
 }
-
-.navbar a:hover {
-    color: var(--secondary);
-}
-
+.navbar a:hover { color: var(--secondary); }
 .nav-brand {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
+/* Particles */
 #particles-js {
     position: absolute;
     width: 100%;
@@ -60,6 +54,7 @@ body {
     z-index: 1;
 }
 
+/* Header */
 header {
     height: 100vh;
     display: flex;
@@ -71,27 +66,17 @@ header {
     background: linear-gradient(rgba(38, 96, 153, 0.9), rgba(5, 32, 59, 0.9));
     color: white;
 }
-
 .header-content {
     opacity: 0;
     transform: translateY(20px);
     transition: all 1s ease;
 }
-
 .header-content.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
-.header-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-.header-content p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
+.header-content h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+.header-content p { font-size: 1.5rem; margin-bottom: 2rem; }
 
 .btn {
     padding: 1rem 2rem;
@@ -104,16 +89,13 @@ header {
     cursor: pointer;
     display: inline-block;
 }
-
 .btn:hover {
     background-color: #2980b9;
     transform: translateY(-2px);
 }
+.btn:active { transform: translateY(0); }
 
-.btn:active {
-    transform: translateY(0);
-}
-
+/* Sections */
 section {
     padding: 5rem 2rem;
     max-width: 1200px;
@@ -122,24 +104,22 @@ section {
     transform: translateY(20px);
     transition: all 0.6s ease;
 }
-
 section.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
 }
 
+/* Grilles */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
 }
-
 .skill-card {
     background: white;
     padding: 2rem;
@@ -148,83 +128,70 @@ section.visible {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .skill-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Projets */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
-
 .project-card {
     background: white;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
-
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
-
 .project-img {
     width: 100%;
     height: 200px;
     background: var(--secondary);
+    overflow: hidden;
 }
-
-.project-content {
-    padding: 1.5rem;
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
+.project-content { padding: 1.5rem; }
+.project-content h3 { margin-bottom: 1rem; }
 
-.project-content h3 {
-    margin-bottom: 1rem;
-}
-
+/* Présentation */
 .presentation-content {
     background: white;
     border-radius: 10px;
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .about-card {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
 }
-
-.about-text {
-    line-height: 1.8;
-}
-
-.about-text p {
-    margin-bottom: 1rem;
-}
-
+.about-text { line-height: 1.8; }
+.about-text p { margin-bottom: 1rem; }
 .key-points {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
-
 .point {
     padding: 1rem;
     background: var(--light);
     border-radius: 8px;
 }
+.point h4 { color: var(--secondary); margin-bottom: 0.5rem; }
 
-.point h4 {
-    color: var(--secondary);
-    margin-bottom: 0.5rem;
-}
-
+/* Langues */
 .languages-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -232,33 +199,25 @@ section.visible {
     max-width: 800px;
     margin: 0 auto;
 }
-
 .language-card {
     background: white;
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .language-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
 }
-
-.level {
-    color: var(--secondary);
-    font-weight: bold;
-}
-
+.level { color: var(--secondary); font-weight: bold; }
 .language-bar {
     background: var(--light);
     height: 8px;
     border-radius: 4px;
     overflow: hidden;
 }
-
 .progress {
     height: 100%;
     background: var(--secondary);
@@ -266,35 +225,146 @@ section.visible {
     transition: width 1s ease-in-out;
 }
 
-#contact h3{
+/* Contact */
+#contact h3 {
     color: aliceblue;
-    text-align:center;
-    margin-bottom: 1rem;
-    margin-left: 30%;
-    margin-right: 30%;
+    text-align: center;
+    margin: 1rem auto;
     background-color: var(--secondary);
-    border-radius: 20%;
+    border-radius: 30px;
     padding: 1rem;
+    max-width: 300px;
+}
+#contact h3 a { color: aqua; text-decoration: none; }
+
+/* ========== GRAPHE ========== */
+#graphe {
+    background: #1a1a2e;
+    border-radius: 20px;
+    padding: 2rem 2rem 3rem;
+    color: white;
+}
+#graphe .section-title { color: white; }
+
+.graphe-container {
+    background: #16213e;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#mynetwork {
+    width: 100%;
+    height: 550px;
+    border-radius: 10px;
+    background: #0f3460;
+}
+.graphe-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    font-size: 0.95rem;
+}
+.graphe-legend span {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.legend-color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+.graphe-info {
+    text-align: center;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-top: 0.5rem;
 }
 
-#contact h3 a {
-    color:aqua;
+/* ========== MODALE ========== */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+.modal-overlay.active {
+    display: flex;
+}
+.modal-content {
+    background: white;
+    max-width: 700px;
+    width: 90%;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    animation: slideUp 0.3s ease;
+}
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s;
+    line-height: 1;
+}
+.modal-close:hover { color: #e74c3c; }
+.modal-body h2 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+.modal-body img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+.modal-body p {
+    line-height: 1.7;
+    color: #333;
+}
+.modal-body ul {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0 1rem;
+}
+.modal-body a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+.modal-body a:hover { text-decoration: underline; }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-    .header-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .header-content p {
-        font-size: 1.2rem;
-    }
-
-    .navbar {
-        padding: 1rem;
-    }
-
-    .navbar a {
-        margin-left: 1rem;
-    }
+    .header-content h1 { font-size: 2.5rem; }
+    .header-content p { font-size: 1.2rem; }
+    .navbar { padding: 1rem; }
+    .navbar a { margin-left: 1rem; }
+    .about-card { grid-template-columns: 1fr; }
+    #mynetwork { height: 400px; }
+    .modal-content { padding: 1.5rem; }
 }
